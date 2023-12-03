@@ -45,4 +45,4 @@ routes.post("/collections/create", auth, createCollection)
 routes.delete("/collections/delete", auth, deleteCollection)
 routes.patch("/collections/update", auth, updateCollection)
 
-module.exports = routes
+module.exports = routes;
