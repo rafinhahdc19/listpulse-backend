@@ -22,11 +22,9 @@ async function sendMail(email, slug, type) {
                 subject: "Haveal autentication",
                 html: `<p>Clique no link abaixo para autenticar:</p><a href='${process.env.FRONTEND}/auth/emailverify/verify/${slug}'>Link de Autenticação</a>`
             });
-            if(info){
-                 return true;
-            }else{
-                throw new Error("Erro ao enviar email: " + error);
-            }
+            
+            return true;
+            
            
         } catch (error) {
             throw new Error("Erro ao enviar email: " + error);
