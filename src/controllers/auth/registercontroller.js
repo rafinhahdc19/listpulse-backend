@@ -82,7 +82,7 @@ const registerController = async (req, res) => {
             try{
                 const enviarEmail = await sendMail(email, VSlug, 1)
                 if(enviarEmail){
-                    return res.status(200).send('Usuário registrado com sucesso, te enviamos um email de confirmação: "havealoficial@outlook.com"')
+                    return res.status(200).send('Usuário registrado com sucesso, te enviamos um email de confirmação: "listpulse@outlook.com.br"')
                 }else{
                     await prisma.users.deleteMany({where: {
                         email:email
