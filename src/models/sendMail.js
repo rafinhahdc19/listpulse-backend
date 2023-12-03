@@ -27,9 +27,11 @@ async function sendMail(email, slug, type) {
             
            
         } catch (error) {
+            console.log(error)
             throw new Error("Erro ao enviar email: " + error);
         }
     } else {
+        console.log("type === 1 || !email || !type || !slug")
         throw new Error("'Type' especificado não existe");
     }
 }
