@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
 const sendMailAsync = util.promisify(transporter.sendMail).bind(transporter);
 
 async function sendMail(email, slug, type) {
-    if (type === 1 || !email || !type || !slug) {
+    /*if (type === 1 || !email || !type || !slug) {
         try {
             const info = await sendMailAsync({
                 from: emailctt,
@@ -33,6 +33,6 @@ async function sendMail(email, slug, type) {
     } else {
         console.log("type === 1 || !email || !type || !slug")
         throw new Error("'Type' especificado não existe");
-    }
+    }*/return true;
 }
 module.exports = sendMail
