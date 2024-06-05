@@ -23,7 +23,7 @@ const createTask = async (req, res) => {
             },
         });
 
-        const maxCollectionsAllowed = 25;
+        const maxCollectionsAllowed = 30;
 
         if (userTaskWithCollectionCount >= maxCollectionsAllowed) {
             return res.status(400).json({ error: 'Você atingiu o limite máximo de taréfas permitidas' });
