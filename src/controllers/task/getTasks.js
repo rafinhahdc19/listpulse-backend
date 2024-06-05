@@ -8,7 +8,7 @@ const getTasks = async (req, res) => {
     return res.status(400).json({ message: 'Parâmetros inválidos' });
   }
 
-  const itemsPerPage = 25;
+  const itemsPerPage = 30;
   const offset = (parseInt(page) - 1) * itemsPerPage;
 
   try {
